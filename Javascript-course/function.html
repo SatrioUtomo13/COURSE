@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+
+        // //function is small code that can be call repeatly
+
+        // //simple function
+        // function sayHello(){
+        //     document.writeln(`<P>Hello world</p>`);
+        // }
+        // sayHello();
+        // sayHello();
+        // sayHello();
+
+
+
+
+        // //function with parameter
+        // function sayMe(firstName, lastName){
+        //     document.writeln(`<p>Hello ${firstName} ${lastName}</p>`)
+        // }
+        // sayMe('satrio', 'utomo');
+
+
+
+
+        // //functin with return value
+        // function birthDay(age){
+        //     const i = (`<p>Happy Birthday ${age}</p>`);
+        //     return i;
+        // }
+        // const mybirthday = birthDay(22);
+        // document.writeln(mybirthday);
+        
+
+        //default parameter
+        function info (name , status = 'unknown' ){
+            console.log(name);
+            console.log(status);
+        }
+
+        info();
+        info('satrio');
+        info('satrio' , 'marriage');
+
+
+
+        //rest parameter
+        function s (name, ...data){
+            let total = 0;
+            for(let item of data){
+                total += item;
+            }
+            document.writeln(`<p>your ${name} is ${total}</p`);
+        }
+        s('orange', 23,54,23);
+
+
+
+        //function as a value
+        function myName(name){
+            document.writeln(`<p>hello ${name}</p`);
+        }
+        let me = myName;
+        me('satrio');
+
+
+
+        //anonymous function
+        const hai = function(sapa){
+            document.writeln(`<p>hello ${sapa}</p`);
+        }
+        hai('utomo');
+
+
+
+        //inner function
+        function outer(){
+            document.writeln(`<p>this is outer function</p`);
+            function inner(){
+                document.writeln(`<p>this is function inner</p`);
+            }
+            inner();   
+        }
+        outer();
+
+        //study case
+        // let person = 100;
+        // function eat (eat){
+        //     person = person + eat;
+        // }
+
+        // function sleep (sleep){
+        //     person = person + (sleep * 2);
+        // }
+
+        // function play (play){
+        //     person = person - (play * 5);
+        // }
+
+
+        // while(true){
+        //     let action = prompt('what do you gonna do??');
+        //     switch (action){
+        //         case 'eat':
+        //             eat(parseInt(prompt('how much??')));
+        //             alert(`now you have ${person} health power`);
+        //             break;
+        //         case 'sleep':
+        //             sleep(parseInt(prompt('how long??')));
+        //             alert(`now you have ${person} health power`);
+        //             break;
+        //         case 'play':
+        //             play(parseInt(prompt('how long??')));
+        //             alert(`now you have ${person} health power`);
+        //             break;
+        //         default:
+        //             alert("you didn't do anything");
+        //     }
+        //     if(person <= 0 ){
+        //         alert('game over');
+        //         break;
+        //     }else{
+        //         let konfirmation = confirm('do you want to play again??');
+        //         if(konfirmation === false){
+        //             break;
+        //         }
+        //     }
+        // }
+
+    </script>
+</body>
+</html>
